@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Visualizations</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      
+      <div class="pages-container">
+  
+        <div class="pages current-page">
+        
+          <a href="index.html" class="back-button">
+            <img src="Arrow.svg" alt="Back" class="back-icon">
+          </a>
+
+            <h1>Interactive Visualizations</h1>
+        
+            <div class="cover-wrap">
+              <div class="project-box" data-target-page="new-page1">
+                <p class="clickable">worn textile trade</p>
+              </div>
+
+              <div class="cover-img">
+                <img src="/imgs/wornTextile/final.png">
+              </div>
+            </div>
+            
+            <div class="project-box" data-target-page="new-page2">
+              <p class="clickable">interactive data studies</p>
+            </div>
+
+            <div class="cover-img">
+              <img src="/imgs/dataStudies/Cover.png">
+            </div>
+
+        </div>
+
+        <div class="pages new-page new-page1">
+              <a href="book1.html" class="back-button">
+                <img src="Arrow.svg" alt="Back" class="back-icon">
+              </a>
+              
+              <div class="gallery">
+
+                <div class="title-left">
+                  <h1>Worn Textile Trade</h1>
+                </div>
+                
+                <div class="gallery-body">
+                  <h3>* Project Overview *</h3>
+                  <p>
+                    I spent 4 months in my Information Design Studio 2 class with Professor Pedro Cruz working on developing a visualization of data from the UN Comtrade database on the international trade of worn textiles. 
+                    There is currently very limited publicly available data on the fashion industry. In particular,post-consumer waste in the fashion industry at a large scale is incredibly difficult to track through data. Monitoring trade flows of worn textiles helps us begin to get an idea of how many post-consumer textiles are floating around in the world -- and which countries the majority of these used clothing and fabric items end up in. Data on trade is public information, and not privately owned data in, for example, the hands of a single clothing brand.
+                  </p>
+
+                  <br>
+                  <p>
+                    Although trade data does not allow us to track what happens to the textiles after they are traded, based on the literature, we do know a few likely fates for worn textiles:
+                  </p>
+                    <ul>
+                      <li>
+                        They are sold cheaply in secondhand markets. Often, what does not get sold in the goodwills of wealthier countries eventually ends up in the marketplaces of developing countries.
+                      </li>
+                      <li>
+                        If the textiles do not sell, they are disposed of. They may be formally landfilled or incinerated, but even wealthy countries generally lack sufficient facilities to formally landfill the huge quantities of used textiles that they export.
+                      </li>
+                    </ul>
+                  <br>
+                  <p>
+                  This means that developing countries tend to bear the brunt of the final disposal of textiles in the global system -- they must find a way to dispose of mass quantities of worn textiles exported to them, and this often means informal/unregulated dumping.
+                  </p>
+                  <br> 
+                  <h3>* Project Process and Methodology *</h3>
+                  <p>
+                    I began the project by conducting a visual exploration of the data. In order to do this, first did some general structuring of the dataset in R, and then loaded my csv file into Processing for visualization. I visualized the variables Weight (in kilos), Value (in USD), and Flow (imports and exports) for each year in my dataset. Data points tagged as imports are on the left in blue, and exports are in the right in red. Weight is encoded as the size of the main colored circle, and value is encoded through the line weight of the circle stroke. 
+                      <div class="image-collection">
+                        <img class="gallery-img" src="/imgs/wornTextile/dataPosit1.png">
+                        <img class="gallery-img" src="/imgs/wornTextile/dataPosit2.png">
+                        <img class="gallery-img" src="/imgs/wornTextile/dataPosit3.png">
+                      </div>
+                  </p> 
+
+                  <br>
+
+                  <p>
+                    Then, I created a data dashboard to further describe and summarize the dataset: 
+                    <img src="/imgs/wornTextile/dashboard.png" class="gallery-img">
+                  </p>
+                  
+                  <br>
+
+                  <p>
+                    After creating this dashboard, it became clear that the differentiation between imports and exports was arbitrary, and simply representative of which trading partner had been the reporting party. I restructured the data so that instead, we had an exporter and an importer for each recorded trade instance. 
+                    <img src="/imgs/wornTextile/data.png" class="gallery-img">
+                  </p>
+                  
+                  <p>
+                    I continued to explore how to visualize this information. In this version, I continued to use the the flow glyphs from the dashboard, using the p5js library to generate the visualization. Initially, I had them very spaced out -- but discovered that when condensed together, they began to look like threads on a textile.  
+                    <img class="gallery-img" src="/imgs/wornTextile/threads.png">
+                  
+                  </p>
+                    
+                  <p>
+                    In the final iteration of the project, I continued to explore the metaphor of threads, and the visualization takes the form of a patchwork textile. 
+                    <img class="gallery-img" src="/imgs/wornTextile/sketch.jpg">
+                  </p>
+
+                  <br>
+
+                  <a href="https://chloeprock.github.io/worn-textile-trade/">View live project</a>
+                    
+                  <img class="gallery-img" src="/imgs/wornTextile/finalV2.png">
+                  
+                </div>
+
+              </div>
+        </div>
+
+        <div class="pages new-page new-page2">
+          
+          <a href="book1.html" class="back-button">
+            <img src="Arrow.svg" alt="Back" class="back-icon">
+          </a>
+
+            <div class="gallery" id="data-studies">
+
+              <div class="title-left">
+                <h1>Interactive data studies</h1>
+              </div>
+
+              <div class="gallery-body">
+                <h3>* 20 Years of Hate Crimes *</h3>
+                <p>This visualization explores data from 1995-2015 on victims of hate crimes in regions of the USA. It was coded using the d3.js library, and is published through my github repository. 
+                </p>
+                <img class="gallery-img "src="/imgs/dataStudies/hateCrimes.png">
+                <p>Read more about the project and view the interactive visualization <a href="https://chloeprock.github.io/hatecrimes.github.io/">here </a></p>
+              
+
+              <h3>* Cities by Air Quality and Water Pollution Levels*</h3>
+              <p>Also coded using the d3.js library, this project positions global cities within the visualization based on their measured levels of air quality (along the x-axis) and water pollution (along the y-axis). A tooltip displays the city, region, and country associated with each point. 
+              </p>
+              <div class="image-collection">
+                <img class="gallery-img" src="/imgs/dataStudies/AQ.png">
+                <img class="gallery-img" src="/imgs/dataStudies/AQ2.png">
+              </div>
+              <p>View the interactive pollution visualization <a href="https://chloeprock.github.io/pollutiondata.github.io/">here</a></p>
+            </div>
+            
+            </div>    
+            
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,278 @@
+:root {
+  --margin-top: 1vh; /* Define custom property for top margin based on viewport height */
+  --margin-left: 1vw; /* Define custom property for left margin based on viewport width */
+}
+
+@font-face {
+  font-family: 'Jura-Bold';
+  src: url('Jura/static/Jura-Bold.ttf') format('truetype');
+  /* You can also add other font formats (e.g., woff, woff2) here for browser compatibility */
+}
+
+html, body {
+  margin: var(--margin-top) var(--margin-left); /* Use the custom properties for margins */
+  padding: 0;
+  background-color:rgb(245, 255, 249) ;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  font-family: 'Jura-Bold', sans-serif;
+  font-size: large;
+  /* Set other styles for your body or specific elements */
+}
+
+h1, h3 {
+  color: rgb(136, 18, 255); 
+}
+
+
+p, a, ui, li {
+  /* color:rgb(2, 101, 0); */
+  color:rgba(30, 39, 30, 0.766); 
+  text-decoration: none;
+}
+
+
+
+a:visited {
+  color:rgb(2, 101, 0);
+  text-decoration: none;
+}
+
+.paragraph-container {
+  max-width: 100%;
+  margin: 0 auto; 
+}
+
+button {
+  margin-left: 10%; 
+  margin-top: 2%; 
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgb(245, 255, 249);
+  color:rgb(2, 101, 0); 
+  border: 1px solid rgb(136, 18, 255);
+}
+
+button:hover {
+  background-color: rgba(237, 218, 255, 0.628);
+  color:rgb(2, 101, 0); 
+  border: 1px solid rgb(136, 18, 255);
+}
+
+.back-button {
+  display: inline-block;
+  width: 32px; /* Set the desired width for the clickable area */
+  height: 32px; /* Set the desired height for the clickable area */
+  margin-right: 10px; /* Adjust margin as needed */
+  /* Add any other styles you want for the clickable area */
+}
+
+.back-icon {
+  width: 100%; /* Make the SVG icon fill the entire clickable area */
+  height: 100%;
+}
+
+.container {
+  /* display: flex;
+  align-items:flex-start; */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: rbg(245, 255, 249);
+}
+
+.project-box {
+  width: 45%; 
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  margin-bottom: 2.5%; 
+  margin-right: 10%;
+  border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-box:hover {
+  background-color: rgb(237, 218, 255); /* Change background color on hover */
+}
+
+.pages{
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  top: 0; 
+  left: 0; 
+  transition: left 0.5s ease-in-out; 
+}
+
+.pages.current-page {
+  left:0%;
+}
+.pages.new-page{
+  left: 100%;
+}
+
+.project-box p {
+  text-decoration: none;
+}
+
+/* Media query for screen widths up to 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+  
+  .left-column,
+  .right-column {
+    width: 100%; /* Set columns to full width on smaller screens */
+  }
+
+  .side-by-side {
+    flex-direction: column; /* Change to a column layout */
+  }
+
+  .side-by-side-new{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #calendar, #calendar2, .gallery-img, #prototype-img1 {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.gallery{
+  display:flex; 
+  padding:0% 2% 2% 2%; 
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+
+.title-left, .gallery-body {
+  padding-right: 10%; 
+}
+
+.gallery-body{
+  padding-bottom: 5%; 
+}
+
+/* .gallery-img{
+  width:100%; 
+} */
+
+.image-collection {
+  display: flex;
+  overflow-x: scroll; /* Allow horizontal scrolling if necessary */
+  height: 60vh; /* Set a fixed height for the image-collection */
+}
+
+.gallery-img {
+  flex: 0 0 auto; /* Let the images scale down as needed */
+  max-width: 100%; /* Ensure images don't exceed their container */
+  margin-top: 2%; /* Add some spacing between images (adjust as needed) */
+  margin-bottom:2%; 
+  margin-right: 2%; 
+}
+
+#headshot {
+  width: 50vh; 
+}
+
+#calendar, #calendar2 {
+  height: 50vh; 
+}
+
+/* #crochet {
+  width: 50vh; 
+} */
+
+#prototype-img1 {
+  height: 80vh;
+  margin-left: 10%; 
+}
+
+.side-by-side{
+  display:flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.side-by-side-new {
+  display:flex; 
+  align-items: flex-start;
+}
+
+.col1, .col2{
+  flex:1;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.col2-img {
+  max-width: 100%;
+  height:auto;
+  display:block;
+}
+
+.side-by-side img {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pdf-container {
+  /* width: ;  */
+  height: 80vh; 
+  width: 50vw; 
+}
+
+.pdf-container2 {
+  height: 80vh;
+  width: 50vw;
+  scale: 90%;
+  padding: 0 10% 10% 10%;
+}
+
+.cover-img {
+  position: fixed;
+  top: 0;
+  right: -50%; /* Initially, position the container outside the viewport */
+  width: 50%;
+  height: 100vh; /* Make the container cover the entire viewport height */
+  transition: right 0.3s; /* Add a transition for smooth animation */
+  visibility: hidden; 
+}
+
+.cover-img img {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  padding-top: 10%; 
+  /* padding-top: 20%;   */
+  margin: 0 auto; /* Center the image horizontally and vertically */
+}
+
+
+.project-box:hover + .cover-img {
+  right: 0; /* Move the container to the right to make it visible */
+  visibility: visible; /* Make the container visible */
+}
+
+
+
+
+
+
+
+
+
+
