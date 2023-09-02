@@ -42,9 +42,9 @@ let clockDiameter;
 
 function preload(){
 
-  titleFont = loadFont('/Jura/Static/Jura-Bold.ttf');
-  subHFont = loadFont('/Jura/Static/Jura-SemiBold.ttf'); 
-  bodyFont = loadFont('/Jura/Static/Jura-Light.ttf'); 
+  titleFont = loadFont('/Jura/static/Jura-Bold.ttf');
+  subHFont = loadFont('/Jura/static/Jura-SemiBold.ttf'); 
+  bodyFont = loadFont('/Jura/static/Jura-Light.ttf'); 
 
 }
 
