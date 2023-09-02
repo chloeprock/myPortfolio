@@ -45,9 +45,10 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   frameRate(fr);
 
-  titleFont = loadFont('/Jura/Jura-Bold.ttf');
-  subHFont = loadFont('/Jura/Jura-SemiBold.ttf'); 
-  bodyFont = loadFont('/Jura/Jura-Light.ttf'); 
+  titleFont = loadFont('https://chloeprock.github.io/myPortfolio/Jura/Jura-Bold.ttf');
+  
+  subHFont = loadFont('https://chloeprock.github.io/myPortfolio/Jura/Jura-SemiBold.ttf'); 
+  bodyFont = loadFont('https://chloeprock.github.io/myPortfolio/Jura/Jura-Light.ttf'); 
 
     // Check if fonts are loaded
     if (titleFont && subHFont && bodyFont) {
