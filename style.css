@@ -39,7 +39,6 @@ p, a, ui, li {
 }
 
 
-
 a:visited {
   color:rgb(2, 101, 0);
   text-decoration: none;
@@ -123,33 +122,6 @@ button:hover {
 
 .project-box p {
   text-decoration: none;
-}
-
-/* Media query for screen widths up to 768px */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stack columns vertically on smaller screens */
-  }
-  
-  .left-column,
-  .right-column {
-    width: 100%; /* Set columns to full width on smaller screens */
-  }
-
-  .side-by-side {
-    flex-direction: column; /* Change to a column layout */
-  }
-
-  .side-by-side-new{
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  #calendar, #calendar2, .gallery-img, #prototype-img1 {
-    height: 100%; 
-    width: 100%;
-    object-fit: contain;
-  }
 }
 
 .gallery{
@@ -262,12 +234,87 @@ button:hover {
   margin: 0 auto; /* Center the image horizontally and vertically */
 }
 
-
 .project-box:hover + .cover-img {
   right: 0; /* Move the container to the right to make it visible */
   visibility: visible; /* Make the container visible */
 }
 
+/* Media query for screen widths up to 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+  
+  .left-column,
+  .right-column {
+    width: 100%; /* Set columns to full width on smaller screens */
+  }
+
+  .side-by-side {
+    flex-direction: column; /* Change to a column layout */
+  }
+
+  .side-by-side-new{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #calendar, #calendar2, .gallery-img, #prototype-img1 {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+/* CSS for phones (up to 767px width) */
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%; /* Set columns to full width on smaller screens */
+  }
+
+  .side-by-side {
+    flex-direction: column; /* Change to a column layout */
+  }
+
+  #calendar, #calendar2, .gallery-img, #prototype-img1 {
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .project-box:hover + .cover-img {
+    right: 0; /* Move the container to the right to make it visible */
+    visibility: hidden; /* Make the container visible */
+  }
+
+  .project-box {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    margin-bottom: 2.5%; 
+    border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
+    /* cursor: pointer;
+    transition: background-color 0.3s; */
+  }
+  
+}
+
+/* CSS for iPad (Portrait mode) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Your specific styles for iPad in portrait mode go here */
+}
+
+/* CSS for iPad (Landscape mode) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Your specific styles for iPad in landscape mode go here */
+}
 
 
 
