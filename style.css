@@ -4,8 +4,9 @@
 }
 
 @font-face {
-  font-family: 'Jura-Bold', 'sans-serif';
-  src: url('https://chloeprock.github.io/myPortfolio/Jura/Jura-Bold.ttf') format('truetype');
+  font-family: 'Jura';
+  src: 
+  url('https://chloeprock.github.io/myPortfolio/Jura/Jura-Bold.ttf') format('truetype');
   /* You can also add other font formats (e.g., woff, woff2) here for browser compatibility */
 }
 
@@ -21,7 +22,7 @@ canvas {
 }
 
 body {
-  font-family: 'Jura-Bold', sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: large;
   /* Set other styles for your body or specific elements */
 }
