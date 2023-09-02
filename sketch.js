@@ -52,6 +52,18 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   frameRate(fr);
 
+    // Check if fonts are loaded
+    if (titleFont && subHFont && bodyFont) {
+      // Fonts are loaded, you can use them
+      textFont(titleFont);
+      textSize(24);
+      text("This is a title", 50, 50);
+    } else {
+      // Fonts failed to load, provide fallback or handle the error
+      console.error("Fonts failed to load.");
+      // You can provide a fallback font or take other actions here
+    }
+
   calculateLayout(); 
 
   //color library 

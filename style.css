@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: 'Jura-Bold';
+  font-family: 'Jura-Bold', 'Lato', 'Roboto', 'sans-serif';
   src: url('Jura/static/Jura-Bold.ttf') format('truetype');
   /* You can also add other font formats (e.g., woff, woff2) here for browser compatibility */
 }
