@@ -248,7 +248,7 @@ button:hover {
   right: -50%; /* Initially, position the container outside the viewport */
   width: 50%;
   height: 100vh; /* Make the container cover the entire viewport height */
-  transition: right 0.3s; /* Add a transition for smooth animation */
+  transition: right 0.2s ease-in-out; /* Add a transition for smooth animation */
   visibility: hidden; 
 }
 
