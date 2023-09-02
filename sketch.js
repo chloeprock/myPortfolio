@@ -40,28 +40,26 @@ let minutesRadius;
 let hoursRadius;
 let clockDiameter;
 
-function preload(){
-
-  titleFont = loadFont('/Jura/static/Jura-Bold.ttf');
-  subHFont = loadFont('/Jura/static/Jura-SemiBold.ttf'); 
-  bodyFont = loadFont('/Jura/static/Jura-Light.ttf'); 
-
-}
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   frameRate(fr);
 
+  titleFont = loadFont('/Jura/Jura-Bold.ttf');
+  subHFont = loadFont('/Jura/Jura-SemiBold.ttf'); 
+  bodyFont = loadFont('/Jura/Jura-Light.ttf'); 
+
     // Check if fonts are loaded
     if (titleFont && subHFont && bodyFont) {
       // Fonts are loaded, you can use them
-      textFont(titleFont);
-      textSize(24);
-      text("This is a title", 50, 50);
+
     } else {
       // Fonts failed to load, provide fallback or handle the error
       console.error("Fonts failed to load.");
       // You can provide a fallback font or take other actions here
+      titleFont = 'Arial', '20'; 
+      subHFont = 'Arial', '12'; 
+      bodyFont = 'Arial', '10'; 
     }
 
   calculateLayout(); 
