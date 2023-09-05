@@ -287,23 +287,23 @@ button:hover {
     object-fit: contain;
   }
 
-  .project-box:hover + .cover-img {
-    right: 0; /* Move the container to the right to make it visible */
-    visibility: hidden; /* Make the container invisible */
-  }
-
   .cover-wrap{
     display: flex; 
     flex-direction: column; 
     align-items: center;
+    width: 80%;
   } 
 
-  .cover-img {
+  .cover-img img{
     visibility: visible;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
   }
 
   .project-box {
-    width: 90vw; 
+    width:auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -312,6 +312,12 @@ button:hover {
     border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
     /* cursor: pointer;
     transition: background-color 0.3s; */
+  }
+
+  .gallery{
+    display:flex; 
+    flex-direction: column;
+    align-items: center;
   }
   
 }
