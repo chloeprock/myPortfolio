@@ -302,19 +302,18 @@ button:hover {
     max-height: 50vh;
   } */
 
-  .project-box:hover + .cover-img {
-    /* right: 0; Move the container to the right to make it visible */
-    visibility: invisible; /* Make the container invisible */
+  .cover-img {
+    visibility: hidden;
   }
 
+
   .project-box {
-    width:80vw;
+    width:70vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10%;
+    padding: 6%;
     margin-bottom: 2.5%; 
-    margin-left: 5%;
     border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
     /* cursor: pointer;
     transition: background-color 0.3s; */
