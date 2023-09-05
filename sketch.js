@@ -424,7 +424,7 @@ function drawTitle(){
   noStroke(); 
   textSize(titleSize); 
   textFont(titleFont);
-  text("chloe prock", x + titleSize, y + titleSize); 
+  text("chloe prock", x + titleSize/2, y + titleSize); 
 }
 
 function drawAbout() {
