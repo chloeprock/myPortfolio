@@ -70,7 +70,7 @@ function setup() {
   lightPurple = color(237, 218, 255); 
   black = color(0); 
   green = color(141, 196, 139); 
-  offWhite = color(245, 255, 249); 
+  offWhite = color(255); 
   midPurple = color(170, 145, 189); 
 }
 

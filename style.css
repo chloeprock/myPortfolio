@@ -13,7 +13,7 @@
 html, body {
   margin: var(--margin-top) var(--margin-left); /* Use the custom properties for margins */
   padding: 0;
-  background-color:rgb(245, 255, 249) ;
+  background-color:rgb(255) ;
   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
