@@ -306,6 +306,9 @@ button:hover {
     visibility: hidden;
   }
 
+  .project-box:hover + .cover-img {
+    visibility: hidden;
+  }
 
   .project-box {
     width:70vw;
