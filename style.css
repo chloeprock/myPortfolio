@@ -302,8 +302,13 @@ button:hover {
     max-height: 50vh;
   }
 
+  .project-box:hover + .cover-img {
+    right: 0; /* Move the container to the right to make it visible */
+    visibility: invisible; /* Make the container visible */
+  }
+
   .project-box {
-    width:auto;
+    width:80%;
     display: flex;
     flex-direction: column;
     align-items: center;
