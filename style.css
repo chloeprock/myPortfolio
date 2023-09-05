@@ -294,17 +294,17 @@ button:hover {
     width: 100%;
   } 
 
-  .cover-img img{
+  /* .cover-img img{
     visibility: visible;
     position: relative;
     display: flex;
     flex-direction: column;
     max-height: 50vh;
-  }
+  } */
 
   .project-box:hover + .cover-img {
-    right: 0; /* Move the container to the right to make it visible */
-    visibility: invisible; /* Make the container visible */
+    /* right: 0; Move the container to the right to make it visible */
+    visibility: invisible; /* Make the container invisible */
   }
 
   .project-box {
@@ -314,6 +314,7 @@ button:hover {
     align-items: center;
     padding: 10%;
     margin-bottom: 2.5%; 
+    margin-left: 5%;
     border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
     /* cursor: pointer;
     transition: background-color 0.3s; */
