@@ -96,6 +96,7 @@ function draw() {
   background(offWhite); 
 
   drawTitle(); 
+  drawSubtitle(); 
   drawAbout(); 
 
   drawBookcase(); 
@@ -425,6 +426,14 @@ function drawTitle(){
   textSize(titleSize); 
   textFont(titleFont);
   text("chloe prock", x + titleSize/2, y + titleSize); 
+}
+
+function drawSubtitle(){
+  fill(136, 18, 255, 75);
+  noStroke(); 
+  textSize(titleSize/2);
+  textFont(titleFont);
+  text("project library", x + titleSize/2, y + titleSize*2); 
 }
 
 function drawAbout() {
