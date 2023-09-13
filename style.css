@@ -216,7 +216,7 @@ button:hover {
 .cover-img {
   position: fixed;
   top: 0;
-  right: -50%; /* Initially, position the container outside the viewport */
+  /* right: -50%;  */
   width: 50%;
   height: 100vh; /* Make the container cover the entire viewport height */
   transition: right 0.2s ease-in-out; /* Add a transition for smooth animation */
