@@ -26,16 +26,15 @@ body {
 }
 
 h1, h3 {
-  color: rgb(136, 18, 255); 
+  color: rgb(73, 0, 145); 
+  
 }
-
 
 p, a, ui, li {
   /* color:rgb(2, 101, 0); */
   color:rgba(30, 39, 30, 0.766); 
   text-decoration: none;
 }
-
 
 a:visited {
   color:rgb(2, 101, 0);
@@ -54,13 +53,13 @@ button {
   padding: 10px;
   background-color: rgb(245, 255, 249);
   color:rgb(2, 101, 0); 
-  border: 1px solid rgb(136, 18, 255);
+  border: 1px solid rgb(73, 0, 145); 
 }
 
 button:hover {
   background-color: rgba(237, 218, 255, 0.628);
   color:rgb(2, 101, 0); 
-  border: 1px solid rgb(136, 18, 255);
+  border: 1px solid rgb(73, 0, 145); 
 }
 
 .back-button {
@@ -74,6 +73,24 @@ button:hover {
 .back-icon {
   width: 100%; /* Make the SVG icon fill the entire clickable area */
   height: 100%;
+}
+
+.forward-button {
+  display: inline-block;
+  width: 32px; /* Set the desired width for the clickable area */
+  height: 32px; /* Set the desired height for the clickable area */
+  margin-right: 10px; /* Adjust margin as needed */
+  margin-left: 90%;
+  /* Add any other styles you want for the clickable area */
+}
+
+.forward-icon {
+  width: 100%; /* Make the SVG icon fill the entire clickable area */
+  height: 100%;
+}
+
+a.home-button{
+  font-weight: bolder;
 }
 
 .container {
@@ -93,7 +110,7 @@ button:hover {
   padding-left: 5%;
   margin-bottom: 2.5%; 
   margin-right: 10%;
-  border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
+  border: 2px solid rgb(73, 0, 145); /* Add the border styling you want */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -315,7 +332,7 @@ button:hover {
     align-items: center;
     padding: 6%;
     margin-bottom: 2.5%; 
-    border: 2px solid rgb(136, 18, 255); /* Add the border styling you want */
+    border: 2px solid rgb(73, 0, 145); /* Add the border styling you want */
     /* cursor: pointer;
     transition: background-color 0.3s; */
   }
@@ -326,7 +343,6 @@ button:hover {
     align-items: center;
   }
 
-  
 }
 
 /* CSS for iPad (Portrait mode) */

@@ -1,202 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Textile Art</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
-  </head>
+  <title>Interactive Visualizations</title>
 
-  <body>
-    <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
 
-    <div class="container">
-      <div class="pages-container">
-      <div class="pages current-page">
-      
-        <a href="index.html" class="back-button">
-          <img src="Arrow.svg" alt="Back" class="back-icon">
-        </a>
+</head>
 
-          <h1>textile art</h1>
-      
-          <div class="project-box" data-target-page="new-page1">
-            <p class="clickable">crochet gallery</p>
-          </div>
+<body>
 
-          <div class="cover-img">
-            <img src="imgs/crochet/cover.png">
-          </div>
+  <script src="script.js"></script>
 
-          <div class="project-box" data-target-page="new-page2">
-            <p class="clickable">knitwear gallery</p>
-          </div>
-
-          <div class="cover-img">
-            <img src="imgs/knitwear/cover.png">
-          </div>
-
-      </div>
-
-      <div class="pages new-page new-page1">
-        
-        <a href="book5.html" class="back-button">
-          <img src="Arrow.svg" alt="Back" class="back-icon">
-        </a>
-
-
-
-        <div class="gallery">
-
-          <div class="title-left">
-            <h1>Crochet gallery</h1>
-          </div>
-
-          <div class="gallery-body">
-            <h3>* Some of my finished works *</h3>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Victorian Lattice stitch tie cardigan
-                  <br>
-                  *freehanded 
-                  <br>
-                  100% cotton 
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/crochet/img1.png">
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Hexagon short sleeve button-up
-                  <br>
-                  Linen / cotton blend 
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/crochet/img2.png">
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Large tote bag 
-                  <br>
-                  *freehanded
-                  <br>
-                  cotton outer, linen lining
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/crochet/img3.png">
-              </div>
-            </div>
-            
-
-          </div>
-
-        </div>
-        
-      </div>
-
-
-      <div class="pages new-page new-page2">
-        
-        <a href="book5.html" class="back-button">
-          <img src="Arrow.svg" alt="Back" class="back-icon">
-        </a>
-
-        <div class="gallery">
-
-          <div class="title-left">
-            <h1>Knitwear gallery</h1>
-          </div>
-
-          <div class="gallery-body">
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Open knit stitch long sleeve
-                  <br>
-                  *freehanded
-                  <br>
-                  Hand died merino wool, mohair, and alpaca 
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/knitwear/img1.png">
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Knit tank top
-                  <br>
-                  Hand died merino wool, acrylic
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/knitwear/img2.png">
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Valentines keyhole sweater
-                  <br>
-                  *freehanded 
-                  <br>
-                  Hand died wool, alpaca 
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/knitwear/img3.png">
-              </div>
-            </div>
-
-            <br><br>
-
-            <div class="side-by-side-new">
-              <div class="col1">
-                <p> Cable knit scarf with fringe
-                  <br>
-                  Malabrigo rasta wool, alpaca 
-                </p>
-              </div>
-
-              <div class="col2">
-                <img class="col2-img", src="imgs/knitwear/img4.png">
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-          
-      </div>
-
-    </div>
+  <div class="cover-img">
+    <img src="imgs/laLettura/img4.png">
   </div>
 
-  </body>
+  <a href="book4.html" class="back-button">
+    <img src="Arrow.svg" alt="Back" class="back-icon">
+  </a>
+
+  <a href="book6.html" class="forward-button">
+    <img src="forwardArrow.svg" alt="Back" class="forward-icon">
+  </a>
+
+  <div class="gallery">
+    <div class="title-left">
+      <h1>Per la lettura: 200 artisti di arte contemporanea</h1>
+      <a href="index.html" class="home-button">HOME</a>
+    </div>    
+
+    <div class="gallery-body">
+      <h3>* Project Overview *</h3>
+      <p>
+        Infographic designed for La Lettura (Corriere della Sera) to showcase the top 200 contemporary artists in the last 20 years. Data sources: The Contemporary Art Market Report 2020 (for the artist ranking) and ArtMarket.com (for the artist classification). Myself and my partner Beatrice Bazzan (@TheVisualAgency) conducted the research, data analysis, and design for this glyph-based data visualization. 
+        Published on Sunday June 20th 2021.
+      </p>
+
+      <img class="gallery-img" src="imgs/laLettura/img1.png">
+      <img class="gallery-img" src="imgs/laLettura/img2.png">
+      <img class="gallery-img" src="imgs/laLettura/img3.png">
+      <img class="gallery-img" src="imgs/laLettura/img4.png">
+
+    </div>
+
+  </div>
+
+</body>
+
 </html>

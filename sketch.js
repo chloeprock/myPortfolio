@@ -66,10 +66,10 @@ function setup() {
   calculateLayout(); 
 
   //color library 
-  purple = color(136, 18, 255); 
+  purple = color(73, 0, 145); 
   lightPurple = color(237, 218, 255); 
   black = color(0); 
-  green = color(141, 196, 139); 
+  green = color(205, 230, 200); 
   offWhite = color(255); 
   midPurple = color(170, 145, 189); 
 }
@@ -204,15 +204,15 @@ function drawBookcase(){
 
 }
 
-let bookNames = ["Interactive Visualizations", "Print Design", "Client Work"];
-let bookNamesB = ["Research", "Textile Art"];
+let bookNames = ["Worn Textile Trade", "Planting Calendar", "Visualizing the Waste System", "Climate Resilience Report", "La Lettura: Contemporary Art Visualization"];
+let bookNamesB = ["Zen dot com", "Data sketches", "Unicef Guidance Note", "Visual Cognition Study", "Hurricanes"];
 
 function drawBooks(){
 
   let bookOffset = 20; 
   bookHeight = rectHeight/2 - bookOffset; 
-  bookWidth = rectWidth/10; 
-  numBooks = 3; 
+  bookWidth = rectWidth/20; 
+  numBooks = 5; 
   bookSpace = bookWidth; 
 
   for(let i = 0; i < numBooks; i++){
@@ -227,11 +227,11 @@ function drawBooks(){
 
 
     if(i == 0){
-      rotate(-0.2); 
+      rotate(-0.1); 
     } else if (mouseOverBook && i == 0){
-      rotate(-0.4); 
-    } else if (mouseOverBook && (i == 1 || i == 2)) {
-      rotate(0.2); 
+      rotate(-0.2); 
+    } else if (mouseOverBook && (i > 0)) {
+      rotate(0.1); 
     }
 
     if(mouseOverBook){
@@ -255,14 +255,20 @@ function drawBooks(){
         if(i == 2){
           window.open('book3.html', '_self'); 
         }
+        if(i == 3){
+          window.open('book4.html', '_self'); 
+        }
+        if(i == 4){
+          window.open('book5.html', '_self'); 
+        }
       }
     }
 
     bookSpace += bookWidth*2; 
   }
 
-  for(let i = 0; i < numBooks - 1; i++){
-    let bookX = x - rectWidth/10 + bookSpace;
+  for(let i = 0; i < numBooks; i++){
+    let bookX = x - rectWidth/200 + bookSpace;
     let bookY = y + rectHeight + (rectHeight/2) + bookOffset/2; 
     let mouseOverBook = mouseX > bookX && mouseX < bookX + bookWidth && mouseY > bookY && mouseY < bookY + bookHeight;
 
@@ -271,9 +277,9 @@ function drawBooks(){
     let rotationCenterY = bookY + bookHeight / 2; 
     translate(rotationCenterX, rotationCenterY); 
     if(i == 1){
-      rotate(0.2); 
-    } else if (mouseOverBook && (i == 0 || i == 2)){
-      rotate(-0.2); 
+      rotate(0.1); 
+    } else if (mouseOverBook && (i == 0 || i > 1)){
+      rotate(-0.1); 
     }
 
     if(mouseOverBook){
@@ -292,13 +298,19 @@ function drawBooks(){
 
       if(mouseIsPressed){
         if(i == 0){
-          window.open('book4.html', '_self'); 
+          window.open('book6.html', '_self'); 
         }
         if(i == 1){
-          window.open('book5.html', '_self'); 
+          window.open('book7.html', '_self'); 
         }
         if(i == 2){
-          window.open('book6.html', '_self'); 
+          window.open('book8.html', '_self'); 
+        }
+        if(i == 3){
+          window.open('book9.html', '_self'); 
+        }
+        if(i == 4){
+          window.open('book10.html', '_self'); 
         }
       }
 
