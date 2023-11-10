@@ -204,7 +204,7 @@ function drawBookcase(){
 
 }
 
-let bookNames = ["Worn Textile Trade", "Planting Calendar", "To Capture a Feeling", "Climate Resilience Report", "La Lettura: Contemporary Art Visualization"];
+let bookNames = ["Worn Textile Trade", "Planting Calendar", "To Capture a Feeling", "Climate Resilience Report", "La Lettura"];
 let bookNamesB = ["Visualizing the Waste System", "Data sketches", "Unicef Guidance Note", "Visual Cognition Study", "Hurricanes"];
 
 function drawBooks(){
