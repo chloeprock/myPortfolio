@@ -189,6 +189,11 @@ a.home-button{
   margin-left: 10%; 
 }
 
+#exhibitA {
+  height: 80vh;
+
+}
+
 .side-by-side{
   display:flex;
   align-items: flex-start;
