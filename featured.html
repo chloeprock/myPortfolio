@@ -1,104 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Book6</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
-  </head>
+  <title>A Perfect Storm</title>
 
-  <body>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
 
-    <script src="script.js"></script>
+</head>
 
-    <div class="container">
-        
-      <a href="index.html" class="back-button">
-        <img src="Arrow.svg" alt="Back" class="back-icon">
-      </a>
+<body>
 
-      <a href="book2.html" class="forward-button">
-        <img src="forwardArrow.svg" alt="Back" class="forward-icon">
-      </a>
-      
-      <div class="gallery">
+  <script src="script.js"></script>
 
-        <div class="title-left">
-          <h1>Worn Textile Trade</h1>
-          <a href="index.html" class="home-button">HOME</a>
-        </div>
-        
-        <div class="gallery-body">
-          <h3>* Project Overview *</h3>
-          <p>
-            I spent 4 months in my Information Design Studio 2 class with Professor Pedro Cruz working on developing a visualization of data from the UN Comtrade database on the international trade of worn textiles. 
-            There is currently very limited publicly available data on the fashion industry. In particular,post-consumer waste in the fashion industry at a large scale is incredibly difficult to track through data. Monitoring trade flows of worn textiles helps us begin to get an idea of how many post-consumer textiles are floating around in the world -- and which countries the majority of these used clothing and fabric items end up in. Data on trade is public information, and not privately owned data in, for example, the hands of a single clothing brand.
-          </p>
+  <div class="navBar">
+
+    <a href="index.html" class="button-left">
+      <img src="Arrow.svg" alt="Back" class="back-icon">
+    </a>
+
+    <a href="index.html" class="home-button">CHLOE PROCK</a>
+
+    <a href="book2.html" class="button-right">
+      <img src="forwardArrow.svg" alt="Back" class="forward-icon">
+    </a>
+
+  </div>
+
+  <div class="cover-img">
+    <img src="imgs/wornTextile/finalV2.png">
+  </div>
+
+  <div class="container">
+
+
+    <div class="gallery">
+
+      <div class="title-left">
+        <h1>A Perfect Storm</h1>
+        <h3>Visualizing Climate Risk and Emissions</h3>
+
+        <br>
+        <br>
+
+
+      </div>
+
+      <div class="gallery-body">
+        <img src="imgs/PerfectStorm/Panel.png" class="gallery-img">
+
+        <h3>* Project Overview *</h3>
+        <p>
+          This project explores the relationship between the capitalist system and its implications for climate change. 
+          The foundational concepts stem from a critical examination of the capitalist drive for profit-making, 
+          perpetual consumption patterns, inequity between citizens from developing and developed economies, 
+          and the implications of these factors on the growing climate crisis. We draw from the work of H.A Baer, 
+          which illuminates the impact of the capitalist ideology on perpetuating fossil fuel reliance and greenhouse gas emissions: 
 
           <br>
-          <p>
-            Although trade data does not allow us to track what happens to the textiles after they are traded, based on the literature, we do know a few likely fates for worn textiles:
-          </p>
-            <ul>
-              <li>
-                They are sold cheaply in secondhand markets. Often, what does not get sold in the goodwills of wealthier countries eventually ends up in the marketplaces of developing countries.
-              </li>
-              <li>
-                If the textiles do not sell, they are disposed of. They may be formally landfilled or incinerated, but even wealthy countries generally lack sufficient facilities to formally landfill the huge quantities of used textiles that they export.
-              </li>
-            </ul>
-          <br>
-          <p>
-          This means that developing countries tend to bear the brunt of the final disposal of textiles in the global system -- they must find a way to dispose of mass quantities of worn textiles exported to them, and this often means informal/unregulated dumping.
-          </p>
           <br> 
-          <h3>* Project Process and Methodology *</h3>
-          <p>
-            I began the project by conducting a visual exploration of the data. In order to do this, first did some general structuring of the dataset in R, and then loaded my csv file into Processing for visualization. I visualized the variables Weight (in kilos), Value (in USD), and Flow (imports and exports) for each year in my dataset. Data points tagged as imports are on the left in blue, and exports are in the right in red. Weight is encoded as the size of the main colored circle, and value is encoded through the line weight of the circle stroke. 
-              <div class="image-collection">
-                <img class="gallery-img" src="imgs/wornTextile/dataPosit1.png">
-                <img class="gallery-img" src="imgs/wornTextile/dataPosit2.png">
-                <img class="gallery-img" src="imgs/wornTextile/dataPosit3.png">
-              </div>
-          </p> 
+          
+          “In an increasingly globalized economic system, the capitalist drive for profit making and economic expansion results in 
+          a perpetual treadmill of production and consumption heavily reliant on fossil fuels and other substances that produce 
+          greenhouse gas emissions.” [1]. 
 
           <br>
-
-          <p>
-            Then, I created a data dashboard to further describe and summarize the dataset: 
-            <img src="imgs/wornTextile/dashboard.png" class="gallery-img">
-          </p>
-          
           <br>
 
-          <p>
-            After creating this dashboard, it became clear that the differentiation between imports and exports was arbitrary, and simply representative of which trading partner had been the reporting party. I restructured the data so that instead, we had an exporter and an importer for each recorded trade instance. 
-            <img src="imgs/wornTextile/data.png" class="gallery-img">
-          </p>
-          
-          <p>
-            I continued to explore how to visualize this information. In this version, I continued to use the the flow glyphs from the dashboard, using the p5js library to generate the visualization. Initially, I had them very spaced out -- but discovered that when condensed together, they began to look like threads on a textile.  
-            <img class="gallery-img" src="imgs/wornTextile/threads.png">
-          
-          </p>
-            
-          <p>
-            In the final iteration of the project, I continued to explore the metaphor of threads, and the visualization takes the form of a patchwork textile. 
-            <img class="gallery-img" src="imgs/wornTextile/sketch.jpg">
-          </p>
+          We leverage data from the World Bank on greenhouse gas emissions per capita [2], and the Germanwatch Global Climate Risk Index (CRI) [3]. 
+          The CRI is a weighted index of 4 measures used to evaluate the losses a country has experienced from extreme weather events connected to climate change.
+          The losses analyzed are economic losses (absolute losses of purchasing power parity, and losses per GDP unit), and loss of life (number of lives lost, 
+          and deaths per 100,000 inhabitants). 
 
+        </p>
+
+        <h3>* Project Process and Methodology *</h3>
+
+        <p>
+          The project was created in processing using particle systems and a physics library to simulate realistic hurricane behavior. 
+          Particles leave short trails and have a centrifugal motion: rotating closer to the center than in the outer rim. The hurricanes 
+          have different eye sizes, total sizes, and speeds based on data values. For very at-risk countries, you would see a large hurricane 
+          with a small eye rotating quickly. This mimics the true behavior of hurricanes, where smaller eyes signify greater intensity and 
+          faster rotation indicates stronger winds. The particles extinguish when they reach the eye of the hurricane, and then are reseeded 
+          in the periphery. The outward motion of the emissions ring nods to the idea of emissions expanding from their source and diffusing 
+          into the atmosphere. We color-coded the hurricane and the ring for clarity: CRI is shown in blue, and GHG in red. 
+        
+          <br>
           <br>
 
-          <a href="https://chloeprock.github.io/worn-textile-trade/">View live project</a>
-            
-          <img class="gallery-img" src="imgs/wornTextile/finalV2.png">
-          
-        </div>
-      
+          Ultimately, we aim to depict this metaphorical representation of climate vulnerabilities juxtaposed with global greenhouse gas emissions 
+          to shed light on the relationship between risk and emissions at the country-level granularity. Many nations with low GHG emissions have 
+          and will continue to experience destructive climate events that they did not cause. High-emitting nations should be held responsible for 
+          climate damages in low-emitting nations, and many high-emitting nations can afford to. But, for high emitters, while pollution has historically
+          been something to bury or ship away, climate risk cannot be exported. The impacts of high emissions reverberate globally, regardless of the source,
+          in increasingly unpredictable and destructive ways. 
+        </p>
+
+        <h3>* Project Video *</h3>
+
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/901381287?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Perfect Storm"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        
+
+        <h3>* Project Team *</h3>
+        <p>
+          Chloe Prock <br> 
+          Pedro Cruz <br>
+          Gregory Gold <br> <br>
+
+          This project was developed as part of the Creative Climate Lab Team's work at
+          Northeastern University. <br> <br> 
+
+          Video Edited by Noah Berkowitz 
+        </p>
+
+        <h3>* References *</h3>
+        <p>
+        [1] H.A Baer, “Global Capitalism and Climate Change”, 2012. <br>
+        [2] Hannah Ritchie, Pablo Rosado and Max Roser (2023), “CO₂ and Greenhouse Gas Emissions”, Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/co2-and-greenhouse-gas-emissions'. <br>
+        [3] David Eckstein, Vera Kunzel, Laura Schafer, for Germanwatch, “Global Climate Risk Index 2021”, and “Global Climate Risk Index 2020”. Retrieved from: https://www.germanwatch.org/en/19777 and https://www.germanwatch.org/en/17307 <br>
+        </p>
+
+      </div>
+
     </div>
-    <!-- <script src="books.js"></script> -->
-  </body>
+  </div>
+
+</body>
+
 </html>

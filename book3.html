@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>To capture a feeling</title>
+  <title>Planting calendar</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
@@ -17,99 +18,116 @@
   <script src="script.js"></script>
 
   <div class="cover-img">
-    <img src="imgs/zenDot/img1.png">
+    <img src="imgs/plantingCalender/prototype2.png">
   </div>
 
-  <a href="book5.html" class="back-button">
-    <img src="Arrow.svg" alt="Back" class="back-icon">
-  </a>
+  <div class="navBar">
 
-  <a href="book7.html" class="forward-button">
-    <img src="forwardArrow.svg" alt="Back" class="forward-icon">
-  </a>
+    <a href="book2.html" class="button-left">
+      <img src="Arrow.svg" alt="Back" class="back-icon">
+    </a>
 
-  <div class="gallery"> 
-            
-    <div class="title-left">
-      <h1>To capture a feeling</h1>
-      <a href="index.html" class="home-button">HOME</a>
-    </div>    
+    <a href="index.html" class="home-button">CHLOE PROCK</a>
 
-    <div class="gallery-body">
-      <img class="gallery-img" src="imgs/laserCut/img3.png">
+    <a href="book4.html" class="button-right">
+      <img src="forwardArrow.svg" alt="Back" class="forward-icon">
+    </a>
 
-      <h3>* Project Overview *</h3>
+  </div>
 
-      <p> I developed this data physicalization system in an experience design fabrication course at Northeastern University.
+  <div class="container">
 
-        <br>
-        <br>
+    <div class="gallery">
 
-        The object enables the collection of personal, emotional data as well as the storage of all neccesary pieces to make the visualization.
-        The ultimate goal is to assist the user with self reflection about their emotions, as well as to allow for the sharing of 
-        the often complex emotions with those close to them, even non-verbally. 
-
-        The target audience for such an object are people who struggle to understand their own emotions, as well as to communicate them to others.
-        It could be thought of as a visual journal. 
-      </p>
-
-      <div class="image-collection">
-      <img class="gallery-img" src="imgs/laserCut/img1.png" height="80%">
-      <img class="gallery-img" src="imgs/laserCut/img4.png" height="80%">
+      <div class="title-left"">
+          <h1>Planting calendar</h1>
       </div>
 
-      <h3>* Sketches *</h3>
-      <div class="image-collection">
-        <img class="gallery-img" src="imgs/laserCut/sketch1.jpg" height="80%">
-        <img class="gallery-img" src="imgs/laserCut/sketch2.jpg" height="80%">
-      </div>
-      <div class="image-collection">
-        <img class="gallery-img" src="imgs/laserCut/sketch3.jpg" height="80%">
-        <img class="gallery-img" src="imgs/laserCut/sketch4.jpg" height="80%">
-      </div>
+      <div class=" gallery-body">
 
-      <h3>* Data Collection *</h3>
+        <h3>* Project Overview *</h3>
 
-      <p>Over one week, I collected personal data relating to my emotions. For each data dimension, I recorded a score on a scale of 1-5.
-        <br><br>
-        The unique shapes in the physicalization were designed with the intention to be abstract enough that each user can define their meaning in the way they choose.
-        For this reason, I do not include labels for the objects on the physicalization system. 
-        For myself, I defined them as follows: 
-      </p>
+        <div class="side-by-side">
+          <img src="imgs/plantingCalender/play.gif" class="gallery-img" id="calendar">
+          <p>
+            This calendar is a data visualization based product. It shows all the plants that can be grown, the months
+            they should be planted, and the planting actions you can take to grow those plants in Boston, MA (USA
+            Climate Zone 7A).
+            <br>
+            <br>
+            The data comes from Gardenate.com, a general reference planting guide for home gardeners.
+            <br>
+            <br>
+            The intended purpose of this project was to create a visualization that could assist the user in learning
+            how and when to plant specific vegetables, herbs, and edible flowers for the kitchen garden.
+            <br>
+            <br>
+            A user who may be interested in this calendar is a beginner gardener in Boston who wants to have a reference
+            guide for when, what, and how to plant for their specific climate zone. The data visualization improves upon
+            existing formats for understanding this information, such as the Gardenate website.
+          </p>
+        </div>
 
-      <div class="side-by-side">
-        <h4>Internal Anxiety:</h4>
-        <img class="gallery-img" src="imgs/laserCut/Asset 3 copy.png">
-      </div>
+        <h3>*Designing the Glyphs*</h3>
 
-      <div class="side-by-side">
-        <h4>External Anxiety:</h4>
-        <img class="gallery-img" src="imgs/laserCut/Asset 4 copy.png">
-      </div>
+        <p>The data point for each plant is represented in a glyph notation. The main circle is the plant, colored with
+          the associated planting action for that month. Around the edges of the main circle are the other months with
+          an associated planting action.
+        </p>
+        <br> <br>
 
-      <div class="side-by-side">
-        <h4>Stomach Issues:</h4>
-        <img class="gallery-img" src="imgs/laserCut/Asset 2 copy.png">
-      </div>
-
-      <div class="side-by-side">
-        <h4>Stress Dreams:</h4>
-        <img class="gallery-img" src="imgs/laserCut/Asset 1 copy.png">
-      </div>
-
-      <h3>* In Process *</h3>
-
-        <p>Lo-fi prototyping and testing piece sizes:</p>
-        <img class="gallery-img" src="imgs/laserCut/img2.png" width="100%">
-        
-
-        <h3>* Final Prototype in Action *</h3>
+        <div class="side-by-side">
+          <p>
+            On the right is my initial sketch of this concept, and below are snapshots from the final key that appears
+            in the calendar.
+          </p>
+          <img class="gallery-img" src="imgs/plantingCalender/sketch.jpeg" id="calendar2">
+        </div>
 
         <div class="image-collection">
-          <img class="gallery-img" src="imgs/laserCut/img5.png" height="80%">
-          <img class="gallery-img" src="imgs/laserCut/img6.png" height="80%">
-          <img class="gallery-img" src="imgs/laserCut/img7.png" height="80%">
+          <img class="gallery-img" src="imgs/plantingCalender/diagram1.png">
+          <img class="gallery-img" src="imgs/plantingCalender/diagram2.png">
+          <img class="gallery-img" src="imgs/plantingCalender/diagram3.png">
         </div>
+
+        <h3>* Implementation *</h3>
+        <p>In order to implement this glyph for the data that I had, I wrote some code in processing.
+          I set inventory for the months and the planting actions.
+          Then, I extracted that information from my data and created two arrays. I drew the main circles, and then
+          finally, I created a helper function "drawCircles" in order to draw the additional circles that form the
+          glyph.
+          My output from processing looked like this:
+        </p>
+        <img class="gallery-img" src="imgs/plantingCalender/output.png">
+
+        <br> <br>
+
+        <p>I then split the glyphs I had generated into a grid for each month of the calendar: </p>
+        <img class="gallery-img" src="imgs/plantingCalender/prototype1.png" id="prototype-img1">
+
+        <br> <br>
+        <p>In early iterations of the design, the key appeared only in the introductory pages of the calendar. However,
+          after testing this design in print, it became clear that this would make for a dysfunctional design. It is
+          necessary to have the key to decode the meaning of the planting action colors, as it is too many unique values
+          for a user to hold in their working memory.
+          With the first iterations of the design, the user would have to be constantly flipping back and forth between
+          the month and the key page at the beginning to repeat Cognitive Task/Visual Query #3. This becomes even more
+          frustrating if the calendar is pinned up on the wall, as to flip back to the beginning to see the key you
+          would have to completely remove the calendar from the wall.
+          To solve this issue, I added an additional instance of the planting action key along the bottom of the last
+          page, so that no matter what page of the calendar you are on, you can quickly decode the meaning of each color
+          hue without having to remember 9 unique colors hues + their assigned planting action.
+        </p>
+
+        <div class="image-collection">
+
+          <img class="gallery-img" class="scale" src="imgs/plantingCalender/prototype1A.png">
+          <img class="gallery-img" class="scale" src="imgs/plantingCalender/prototype2.png">
+
+        </div>
+
+
+      </div>
 
     </div>
   </div>
@@ -117,3 +135,4 @@
 </body>
 
 </html>
+

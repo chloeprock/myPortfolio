@@ -12,12 +12,10 @@ let bookSpace;
 
 
 //color lib 
-let purple; 
-let lightPurple; 
-let black; 
-let green; 
-let offWhite; 
-let midPurple; 
+let cPrimary; 
+let cSecondary;
+let cAccent; 
+let cBackground; 
 
 //animate//
 let fr = 30; 
@@ -66,12 +64,11 @@ function setup() {
   calculateLayout(); 
 
   //color library 
-  purple = color(73, 0, 145); 
-  lightPurple = color(237, 218, 255); 
-  black = color(0); 
-  green = color(205, 230, 200); 
-  offWhite = color(255); 
-  midPurple = color(170, 145, 189); 
+  cPrimary = color(0,0,0); 
+  cSecondary = color(237, 218, 255); 
+  cBackground = color(255); 
+  cAccent = color(205, 230, 200); 
+  
 }
 
 function calculateLayout(){
@@ -93,7 +90,7 @@ function windowResized() {
 }
 
 function draw() {
-  background(offWhite); 
+  background(cBackground); 
 
   drawTitle(); 
   drawSubtitle(); 
@@ -113,7 +110,7 @@ function draw() {
 function drawRoom(){
   let lineLength = 50; 
 
-  stroke(purple); 
+  stroke(cPrimary); 
 
   //line extending left
   line(x + rectWidth/6, y + (rectHeight*2) - lineLength, x + rectWidth/6 - windowWidth, y + (rectHeight*2) - lineLength); 
@@ -130,8 +127,8 @@ function drawRoom(){
 
 function drawBookcase(){
 
-  fill(lightPurple);  
-  stroke(purple);
+  fill(cSecondary);  
+  stroke(cPrimary);
   strokeWeight(1); 
 
   let lineLength = 50; 
@@ -204,18 +201,19 @@ function drawBookcase(){
 
 }
 
-let bookNames = ["Worn Textile Trade", "Planting Calendar", "To Capture a Feeling", "Climate Resilience Report", "La Lettura"];
-let bookNamesB = ["Visualizing the Waste System", "Data sketches", "Unicef Guidance Note", "Visual Cognition Study", "Hurricanes"];
+let bookNames = ["A Perfect Storm", "Worn Textile Trade", "Planting Calendar", "To Capture a Feeling", "Climate Resilience Report"];
+let bookNamesB = ["La Lettura", "Visualizing the Waste System", "Data sketches", "Unicef Guidance Note"];
 
 function drawBooks(){
 
   let bookOffset = 20; 
   bookHeight = rectHeight/2 - bookOffset; 
   bookWidth = rectWidth/20; 
-  numBooks = 5; 
+  numBooksA = 5; 
+  numBooksB = 4;
   bookSpace = bookWidth; 
 
-  for(let i = 0; i < numBooks; i++){
+  for(let i = 0; i < numBooksA; i++){
     let bookX = x + bookSpace + rectWidth/6; 
     let bookY = y + rectHeight + bookOffset/2; 
     let mouseOverBook = mouseX > bookX && mouseX < bookX + bookWidth && mouseY > bookY && mouseY < bookY + bookHeight;
@@ -235,10 +233,10 @@ function drawBooks(){
     }
 
     if(mouseOverBook){
-      fill(green);  
+      fill(cAccent);  
       strokeWeight(0.5); 
     } else {
-      fill(purple); 
+      fill(cPrimary); 
     }
     rect(-bookWidth / 2, -bookHeight / 2, bookWidth, bookHeight); // Centered around (0, 0)
     pop(); 
@@ -267,7 +265,7 @@ function drawBooks(){
     bookSpace += bookWidth*2; 
   }
 
-  for(let i = 0; i < numBooks; i++){
+  for(let i = 0; i < numBooksB; i++){
     let bookX = x - rectWidth/200 + bookSpace;
     let bookY = y + rectHeight + (rectHeight/2) + bookOffset/2; 
     let mouseOverBook = mouseX > bookX && mouseX < bookX + bookWidth && mouseY > bookY && mouseY < bookY + bookHeight;
@@ -283,10 +281,10 @@ function drawBooks(){
     }
 
     if(mouseOverBook){
-      fill(green);
+      fill(cAccent);
       strokeWeight(0.5);
     } else {
-      fill(purple); 
+      fill(cPrimary); 
     }
 
     //rect(bookX, bookY, bookWidth, bookHeight); 
@@ -326,7 +324,7 @@ function drawCategory(name){
   let lineLength = 50; 
   let offset = lineLength/2; 
 
-  fill(purple);
+  fill(cPrimary);
   noStroke();  
 
   push();
@@ -358,16 +356,16 @@ function drawClock(){
     // Draw the clock background
 
     noStroke();
-    fill(purple);
+    fill(cPrimary);
     ellipse(cx, cy, clockDiameter + 25, clockDiameter + 25);
-    fill(offWhite);
+    fill(cBackground);
     ellipse(cx, cy, clockDiameter, clockDiameter);
 
     //Draw clock legs 
     let legXR = cx + clockDiameter/2; 
     let legY = cy + clockDiameter/2;
     let legXL = cx - clockDiameter/2; 
-    stroke(purple);
+    stroke(cPrimary);
     strokeWeight(3);
     line(legXR, legY, legXR + 5, legY + 8); 
     line(legXL, legY, legXL - 5, legY + 8);
@@ -380,7 +378,7 @@ function drawClock(){
     let h = map(hour() + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2) - HALF_PI;
 
     // Draw the hands of the clock
-    stroke(purple);
+    stroke(cPrimary);
     strokeWeight(0.5);
     line(cx, cy, cx + cos(s) * secondsRadius, cy + sin(s) * secondsRadius);
     strokeWeight(1);
@@ -390,7 +388,7 @@ function drawClock(){
 
     // Draw the minute ticks
     strokeWeight(1);
-    stroke(purple); 
+    stroke(cPrimary); 
     beginShape(POINTS);
     
     for (let a = 0; a < 360; a += 6) {
@@ -433,7 +431,7 @@ function drawClock(){
 // }
 
 function drawTitle(){
-  fill(purple); 
+  fill(cPrimary); 
   noStroke(); 
   textSize(titleSize); 
   textFont(titleFont);
@@ -460,8 +458,8 @@ function drawAbout() {
   let isMouseOverEllipse = mouseX > ex - subHSize * 2 && mouseX < ex + subHSize * 2 && mouseY > ey - subHSize && mouseY < ey + subHSize;
 
   if (isMouseOverEllipse) {
-    fill(green);
-    stroke(purple); 
+    fill(cAccent);
+    stroke(cPrimary); 
 
     if(mouseIsPressed){
       window.open('about.html', '_self'); 
@@ -469,7 +467,7 @@ function drawAbout() {
 
   } else {
     noFill();
-    stroke(purple); 
+    stroke(cPrimary); 
   }
 
   push(); 
@@ -483,10 +481,10 @@ function drawAbout() {
 
   // Draw the text "about" with the same condition
   if (isMouseOverEllipse) {
-    fill(purple); // Change text color when mouse is over
+    fill(cPrimary); // Change text color when mouse is over
     noStroke(); 
   } else {
-    fill(purple); // Default text color
+    fill(cPrimary); // Default text color
     noStroke(); 
   }
   push();
@@ -509,8 +507,8 @@ function featuredProject(){
   let isMouseOverStar = mouseX > fx - subHSize * 2 && mouseX < fx + subHSize * 2 && mouseY > fy - subHSize && mouseY < fy + subHSize;
 
   if (isMouseOverStar) {
-    fill(green);
-    stroke(purple); 
+    fill(cAccent);
+    stroke(cPrimary); 
 
     if(mouseIsPressed){
       window.open('featured.html', '_self'); 
@@ -518,7 +516,7 @@ function featuredProject(){
 
   } else {
     noFill();
-    stroke(purple); 
+    stroke(cPrimary); 
   }
 
   push(); 
@@ -530,10 +528,10 @@ function featuredProject(){
 
   // Draw the text "about" with the same condition
   if (isMouseOverStar) {
-    fill(purple); // Change text color when mouse is over
+    fill(cPrimary); // Change text color when mouse is over
     noStroke(); 
   } else {
-    fill(purple); // Default text color
+    fill(cPrimary); // Default text color
     noStroke(); 
   }
   

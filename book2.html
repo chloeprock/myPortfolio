@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Planting calendar</title>
+  <title>Worn Textile Trade</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
@@ -17,108 +17,123 @@
   <script src="script.js"></script>
 
   <div class="cover-img">
-    <img src="imgs/plantingCalender/prototype2.png">
+    <img src="imgs/wornTextile/finalV2.png">
   </div>
 
-  <div class="container">
-    <a href="book1.html" class="back-button">
+  <div class="navBar">
+
+    <a href="book1.html" class="button-left">
       <img src="Arrow.svg" alt="Back" class="back-icon">
     </a>
 
-    <a href="book3.html" class="forward-button">
+    <a href="index.html" class="home-button">CHLOE PROCK</a>
+
+    <a href="book3.html" class="button-right">
       <img src="forwardArrow.svg" alt="Back" class="forward-icon">
     </a>
 
+  </div>
+
+  <div class="container">
+
     <div class="gallery">
 
-      <div class="title-left"">
-          <h1>Planting calendar</h1>
-          <a href=" index.html" class="home-button">HOME</a>
+      <div class="title-left">
+        <h1>Worn Textile Trade</h1>
+
       </div>
 
-      <div class=" gallery-body">
+      <div class="gallery-body">
+        <div class="image-collection">
+          <img src="imgs/wornTextile/exhibiti1.JPG" class="gallery-img">
+          <img src="imgs/wornTextile/exhibit2.JPG" class="gallery-img">
+        </div>
 
         <h3>* Project Overview *</h3>
-
-        <div class="side-by-side">
-          <img src="imgs/plantingCalender/play.gif" class="gallery-img" id="calendar">
-          <p>
-            This calendar is a data visualization based product. It shows all the plants that can be grown, the months
-            they should be planted, and the planting actions you can take to grow those plants in Boston, MA (USA
-            Climate Zone 7A).
-            <br>
-            <br>
-            The data comes from Gardenate.com, a general reference planting guide for home gardeners.
-            <br>
-            <br>
-            The intended purpose of this project was to create a visualization that could assist the user in learning
-            how and when to plant specific vegetables, herbs, and edible flowers for the kitchen garden.
-            <br>
-            <br>
-            A user who may be interested in this calendar is a beginner gardener in Boston who wants to have a reference
-            guide for when, what, and how to plant for their specific climate zone. The data visualization improves upon
-            existing formats for understanding this information, such as the Gardenate website.
-          </p>
-        </div>
-
-        <h3>*Designing the Glyphs*</h3>
-
-        <p>The data point for each plant is represented in a glyph notation. The main circle is the plant, colored with
-          the associated planting action for that month. Around the edges of the main circle are the other months with
-          an associated planting action.
+        <p>
+          I spent 4 month developing this visualization of data from the UN Comtrade database on the international trade
+          of worn textiles.
+          This project was accepted into the Information+ XYZ exhibition for display in November of 2023.
+          There is currently very limited publicly available data on the fashion industry. In particular,post-consumer
+          waste in the fashion industry at a large scale is incredibly difficult to track through data. Monitoring trade
+          flows of worn textiles helps us begin to get an idea of how many post-consumer textiles are floating around in
+          the world -- and which countries the majority of these used clothing and fabric items end up in. Data on trade
+          is public information, and not privately owned data in, for example, the hands of a single clothing brand.
         </p>
-        <br> <br>
 
-        <div class="side-by-side">
-          <p>
-            On the right is my initial sketch of this concept, and below are snapshots from the final key that appears
-            in the calendar.
-          </p>
-          <img class="gallery-img" src="imgs/plantingCalender/sketch.jpeg" id="calendar2">
-        </div>
-
+        <br>
+        <p>
+          Although trade data does not allow us to track what happens to the textiles after they are traded, based on
+          the literature, we do know a few likely fates for worn textiles:
+        </p>
+        <ul>
+          <li>
+            They are sold cheaply in secondhand markets. Often, what does not get sold in the goodwills of wealthier
+            countries eventually ends up in the marketplaces of developing countries.
+          </li>
+          <li>
+            If the textiles do not sell, they are disposed of. They may be formally landfilled or incinerated, but even
+            wealthy countries generally lack sufficient facilities to formally landfill the huge quantities of used
+            textiles that they export.
+          </li>
+        </ul>
+        <br>
+        <p>
+          This means that developing countries tend to bear the brunt of the final disposal of textiles in the global
+          system -- they must find a way to dispose of mass quantities of worn textiles exported to them, and this often
+          means informal/unregulated dumping.
+        </p>
+        <br>
+        <h3>* Project Process and Methodology *</h3>
+        <p>
+          I began the project by conducting a visual exploration of the data. In order to do this, first did some
+          general structuring of the dataset in R, and then loaded my csv file into Processing for visualization. I
+          visualized the variables Weight (in kilos), Value (in USD), and Flow (imports and exports) for each year in my
+          dataset. Data points tagged as imports are on the left in blue, and exports are in the right in red. Weight is
+          encoded as the size of the main colored circle, and value is encoded through the line weight of the circle
+          stroke.
         <div class="image-collection">
-          <img class="gallery-img" src="imgs/plantingCalender/diagram1.png">
-          <img class="gallery-img" src="imgs/plantingCalender/diagram2.png">
-          <img class="gallery-img" src="imgs/plantingCalender/diagram3.png">
+          <img class="gallery-img" src="imgs/wornTextile/dataPosit1.png">
+          <img class="gallery-img" src="imgs/wornTextile/dataPosit2.png">
+          <img class="gallery-img" src="imgs/wornTextile/dataPosit3.png">
         </div>
-
-        <h3>* Implementation *</h3>
-        <p>In order to implement this glyph for the data that I had, I wrote some code in processing.
-          I set inventory for the months and the planting actions.
-          Then, I extracted that information from my data and created two arrays. I drew the main circles, and then
-          finally, I created a helper function "drawCircles" in order to draw the additional circles that form the
-          glyph.
-          My output from processing looked like this:
-        </p>
-        <img class="gallery-img" src="imgs/plantingCalender/output.png">
-
-        <br> <br>
-
-        <p>I then split the glyphs I had generated into a grid for each month of the calendar: </p>
-        <img class="gallery-img" src="imgs/plantingCalender/prototype1.png" id="prototype-img1">
-
-        <br> <br>
-        <p>In early iterations of the design, the key appeared only in the introductory pages of the calendar. However,
-          after testing this design in print, it became clear that this would make for a dysfunctional design. It is
-          necessary to have the key to decode the meaning of the planting action colors, as it is too many unique values
-          for a user to hold in their working memory.
-          With the first iterations of the design, the user would have to be constantly flipping back and forth between
-          the month and the key page at the beginning to repeat Cognitive Task/Visual Query #3. This becomes even more
-          frustrating if the calendar is pinned up on the wall, as to flip back to the beginning to see the key you
-          would have to completely remove the calendar from the wall.
-          To solve this issue, I added an additional instance of the planting action key along the bottom of the last
-          page, so that no matter what page of the calendar you are on, you can quickly decode the meaning of each color
-          hue without having to remember 9 unique colors hues + their assigned planting action.
         </p>
 
-        <div class="image-collection">
+        <br>
 
-          <img class="gallery-img" class="scale" src="imgs/plantingCalender/prototype1A.png">
-          <img class="gallery-img" class="scale" src="imgs/plantingCalender/prototype2.png">
+        <p>
+          Then, I created a data dashboard to further describe and summarize the dataset:
+          <img src="imgs/wornTextile/dashboard.png" class="gallery-img">
+        </p>
 
-        </div>
+        <br>
 
+        <p>
+          After creating this dashboard, it became clear that the differentiation between imports and exports was
+          arbitrary, and simply representative of which trading partner had been the reporting party. I restructured the
+          data so that instead, we had an exporter and an importer for each recorded trade instance.
+          <img src="imgs/wornTextile/data.png" class="gallery-img">
+        </p>
+
+        <p>
+          I continued to explore how to visualize this information. In this version, I continued to use the the flow
+          glyphs from the dashboard, using the p5js library to generate the visualization. Initially, I had them very
+          spaced out -- but discovered that when condensed together, they began to look like threads on a textile.
+          <img class="gallery-img" src="imgs/wornTextile/threads.png">
+
+        </p>
+
+        <p>
+          In the final iteration of the project, I continued to explore the metaphor of threads, and the visualization
+          takes the form of a patchwork textile.
+          <img class="gallery-img" src="imgs/wornTextile/sketch.jpg">
+        </p>
+
+        <br>
+
+        <a href="https://chloeprock.github.io/worn-textile-trade/">View live project</a>
+
+        <img class="gallery-img" src="imgs/wornTextile/finalV2.png">
 
       </div>
 
