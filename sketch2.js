@@ -30,6 +30,8 @@ let projectNames = ["A Perfect Storm", "Worn Textile Trade", "Planting Calendar"
                     "La Lettura", "Visualizing the Waste System", "Data sketches", 
                     "Unicef Guidance Note"]; 
 
+// dropdown menu
+let projectsOpen = false; 
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -113,7 +115,7 @@ function draw(){
 
         const barHeight = height/15; 
         const tx = width/4;
-        const ty = barHeight/2;
+        const ty = barHeight/2; 
 
         const tw = textWidth("PROJECTS");
         const th = textAscent() + textDescent();
@@ -121,23 +123,26 @@ function draw(){
         fill(0, 0, 100, 100);
         text("PROJECTS", tx, ty);
 
-        const isMouseOverLabel = mouseX > tx - tw/2 && mouseX < tx + tw/2 &&
-        mouseY > ty - th/2 && mouseY < ty + th/2;
+        //label hover detection
+        const isMouseOverLabel = 
+            mouseX > tx - tw/2 && mouseX < tx + tw/2 &&
+            mouseY > ty - th/2 && mouseY < barHeight;
 
-        const boxW = tw *3; 
+        const boxW = tw * 3;
 
-        const isMouseOverDropdown = isOverDropdown(tx, barHeight, boxW); 
+        const isMouseOverDropdown = projectsOpen && isOverDropdown(tx, barHeight, boxW); 
 
-        if(isMouseOverLabel || isMouseOverDropdown){
-            drawDropdown(tx, barHeight, tw *3); 
+        //state management
+        if(isMouseOverLabel){
+            projectsOpen = true; 
+        } else if(!isMouseOverDropdown){
+            projectsOpen = false; 
         }
 
+        if(projectsOpen){
+            drawDropdown(tx, barHeight, boxW);
+        }
 
-        // if(isMouseOver){
-        //     drawDropdown(tx, barHeight, tw *3); 
-        // }
-        
-    
         return isMouseOverLabel || isMouseOverDropdown; 
 
     }
