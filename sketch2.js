@@ -257,10 +257,22 @@ function titleText(){
 
     fill(0, 0, 100, alpha); 
     noStroke(); 
-    textSize(titleSize); 
     textFont(titleFont || 'Arial');
     textAlign(CENTER, CENTER); 
+    textSize(titleSize); 
+
+
+    if(width > 500){
+    
     text("chloe prock", x, y); 
+
+    } else if (width <= 500) {
+    text("chloe", x, y - margin*2);
+    text("prock", x, y + margin*2); 
+    }
+
+    console.log(width); 
+
 }
 
 function drawInkDrops(){
