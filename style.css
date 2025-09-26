@@ -166,7 +166,18 @@ a.home-button{
 
 .gallery-img {
   flex: 0 0 auto; /* Let the images scale down as needed */
-  max-width: 100%; /* Ensure images don't exceed their container */
+  height: 80vh;
+  width: auto; 
+  object-fit: contain; 
+  max-width: 90%; /* Ensure images don't exceed their container */
+  margin-top: 2%; /* Add some spacing between images (adjust as needed) */
+  margin-bottom:2%; 
+  margin-right: 2%; 
+}
+
+.gallery-collection-img {
+  flex: 0 0 auto; /* Let the images scale down as needed */
+  max-width: 90%; /* Ensure images don't exceed their container */
   margin-top: 2%; /* Add some spacing between images (adjust as needed) */
   margin-bottom:2%; 
   margin-right: 2%; 
