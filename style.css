@@ -177,6 +177,9 @@ a.home-button{
 
 .gallery-collection-img {
   flex: 0 0 auto; /* Let the images scale down as needed */
+  height: 100%;
+  width: auto;
+  object-fit: contain;
   max-width: 90%; /* Ensure images don't exceed their container */
   margin-top: 2%; /* Add some spacing between images (adjust as needed) */
   margin-bottom:2%; 

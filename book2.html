@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Worn Textile Trade</title>
+  <title>A Perfect Storm</title>
 
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
@@ -15,10 +15,6 @@
 <body>
 
   <script src="script.js"></script>
-
-  <div class="cover-img">
-    <img src="imgs/wornTextile/finalV2.png">
-  </div>
 
   <div class="navBar">
 
@@ -34,106 +30,192 @@
 
   </div>
 
+  <div class="cover-img">
+    <img src="imgs/wornTextile/finalV2.png">
+  </div>
+
   <div class="container">
+
 
     <div class="gallery">
 
       <div class="title-left">
-        <h1>Worn Textile Trade</h1>
+        <h1>A Perfect Storm</h1>
+        <h3>Visualizing Climate Risk and Emissions</h3>
+
+        <br>
+        <br>
+
 
       </div>
 
       <div class="gallery-body">
-        <div class="image-collection">
-          <img src="imgs/wornTextile/exhibiti1.JPG" class="gallery-collection-img">
-          <img src="imgs/wornTextile/exhibit2.JPG" class="gallery-collection-img">
-        </div>
 
-        <h3>* Project Overview *</h3>
-        <p>
-          I spent 4 month developing this visualization of data from the UN Comtrade database on the international trade
-          of worn textiles.
-          This project was accepted into the Information+ XYZ exhibition for display in November of 2023.
-          There is currently very limited publicly available data on the fashion industry. In particular,post-consumer
-          waste in the fashion industry at a large scale is incredibly difficult to track through data. Monitoring trade
-          flows of worn textiles helps us begin to get an idea of how many post-consumer textiles are floating around in
-          the world -- and which countries the majority of these used clothing and fabric items end up in. Data on trade
-          is public information, and not privately owned data in, for example, the hands of a single clothing brand.
+      <h3>* Project Overview *</h3>
+      <div class="side-by-side">
+        <img src="imgs/PerfectStorm/Exhibits/exhibit2.png" class="gallery-img">
+                <p>
+          In the face of pressing global issues around climate change, data visualization is a powerful tool for making sense of complexity. The project "A Perfect Storm" aims to engage audiences
+          in a conversation around climate change that considers the emotional responses that the topic can trigger. Through a metaphorical approach of visually juxtoposing countries' climate
+          risk with their climate responsbility, we encourage critical reflection on the experience and inequities of climate change related loss. 
         </p>
 
-        <br>
-        <p>
-          Although trade data does not allow us to track what happens to the textiles after they are traded, based on
-          the literature, we do know a few likely fates for worn textiles:
+      </div>
+
+
+          <p>
+    
+          The major conceptual development of this project was driven by readings on the relationship between climate change and capitalism. One idea about this relationship comes from Hans Baer in
+          his book "Global Capitalism and Climate Change" (2012), where he states that:
+
+          <br> 
+          <br> 
+          “In an increasingly globalized economic system, the capitalist drive for profit making and economic expansion results in 
+          a perpetual treadmill of production and consumption heavily reliant on fossil fuels and other substances that produce 
+          greenhouse gas emissions.” [1]. 
+          <br> 
+          <br> 
+          This illuminates a key issue with the capitalist model of unlimited growth in a world of finite resources. The nature of the problem is a complex and intersecting one. We therefore chose
+          to select data from more that one source.  We leverage data from the World Bank on greenhouse gas emissions per capita [2], and the Germanwatch Global Climate Risk Index (CRI) [3]. 
+          The CRI is a weighted index of 4 measures used to evaluate the losses a country has experienced from extreme weather events connected to climate change.
+          The losses analyzed are economic losses (absolute losses of purchasing power parity, and losses per GDP unit), and loss of life (number of lives lost, 
+          and deaths per 100,000 inhabitants). More information about the conceptual framing of this project is available in the VISAP Pictorical Publication. 
+
+          <br>
+          <br>
+
+
+
         </p>
-        <ul>
-          <li>
-            They are sold cheaply in secondhand markets. Often, what does not get sold in the goodwills of wealthier
-            countries eventually ends up in the marketplaces of developing countries.
-          </li>
-          <li>
-            If the textiles do not sell, they are disposed of. They may be formally landfilled or incinerated, but even
-            wealthy countries generally lack sufficient facilities to formally landfill the huge quantities of used
-            textiles that they export.
-          </li>
-        </ul>
-        <br>
-        <p>
-          This means that developing countries tend to bear the brunt of the final disposal of textiles in the global
-          system -- they must find a way to dispose of mass quantities of worn textiles exported to them, and this often
-          means informal/unregulated dumping.
-        </p>
-        <br>
+
         <h3>* Project Process and Methodology *</h3>
+
         <p>
-          I began the project by conducting a visual exploration of the data. In order to do this, first did some
-          general structuring of the dataset in R, and then loaded my csv file into Processing for visualization. I
-          visualized the variables Weight (in kilos), Value (in USD), and Flow (imports and exports) for each year in my
-          dataset. Data points tagged as imports are on the left in blue, and exports are in the right in red. Weight is
-          encoded as the size of the main colored circle, and value is encoded through the line weight of the circle
-          stroke.
+          Our ideation and prototyping process began by brainstorming nature-inspired forms that could be adapted as representational forms for the data. 
+          
+          <br>
+          <img src="imgs/PerfectStorm/Process/sketches.png" class="gallery-img"> 
+          <br>
+
+          We selected the hurricane as the primary metaphor for the project as it seemed the most widely recognizable, familiar
+          and evocative form—as well as a form which aligns particularly well with the Climate Risk Index data, as higher climate risk can be directly related in some cases to more intense storms. 
+          After identifying the primary metaphor, we began prototyping the form with code. Using a particle system to render the animation of the hurricane as opposed to something like a line drawing 
+          allows for a greater level of complexity and realism, scalability and ease of data integration, as well as dynamic movement. 
+
+          <br>
+          <img src="imgs/PerfectStorm/Process/prototypes1.jpg" class="gallery-img">
+          <br>
+          We ended up moving forward with Prototype 1 as it's behaviour was the most realist to the way hurricanes really move—that is, particles rotating around a center point with centrifugal motion.
+          <br>
+          <br>
+
+          Once we had a working prototype of the hurricane form, we began to map the data to the visual properties of the hurricane. The Climate Risk Index (2021) is created by weighting 4 variables to provide a score 
+          that indicates the extent of losses a coutry has experienced. Lower scores indicate countries with higher risk while higher scores indicate countries with lower risk. Given this inverse relationship, 
+          we used a reverse mapping technique in order to map lower scores to larger radiuses, such that larger hurricanes represent higher climate risk. 
+
+          <br>
+          <img src="imgs/PerfectStorm/Process/mapping.jpg" class="gallery-img">
+          <br>
+
+          We also mapped other elements of the behaviour of the hurricanes to the CRI score. The particles in the simulation have a lifespan; they extinguish at the center and reseed in the periphery. Using Perlin Noise, the particle 
+          spawn points are distributed in strands along the perimeter (see image below). Each particle, given its initial velocity and constant attraction force ends 
+          up in constant orbit around the center, which is what forms the eye of the hurricane. The size of the eye and intensity of rotation are also mapped to the CRI score, in order to correspond to real hurricane behaviour. More intense hurricanes have smaller eyes and rotate
+          faster, while weaker hurricanes have larger eyes and rotate more slowly. Using a physics engine in processing, we were able to control the forces acting on the particles with precision. Greater drag force corresponds to a higher CRI score, 
+          and results in slower particle rotation. To preserve density, hurricanes with a larger radius also have more particles. 
+
+          <br>
+          <br>
+
+          Turning our attention towards the emission dataset, we wanted to create an additional form for visualization that would complement, but not compete with, the hurricane form. 
+          Using the variable "total greenhouse gas emissions per capita", we calculated the average emissions for each country between 2000-2019 in order to match the timespan of the CRI data. 
+          Initially, we had the idea to visualize the emissions as a ring of particles pulsing in and out, but this did not hold enough visual weight against the hurricane form. Using a more solid yet abstract shape
+          inspired by smoke clouds and wind allowed for a better balance between the two forms. 
+
         <div class="image-collection">
-          <img class="gallery-collection-img" src="imgs/wornTextile/dataPosit1.png">
-          <img class="gallery-collection-img" src="imgs/wornTextile/dataPosit2.png">
-          <img class="gallery-collection-img" src="imgs/wornTextile/dataPosit3.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Process/3a.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Process/3b.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Process/3c.png">
         </div>
+
+          <br>
+          <br>
+          We added interactive filtering buttons to the program so that we could view the countries displayed based on each extreme of the two datasets. 
+          Using a split screen approach, we could see a set of 16 countries on the left, as well as select one country to view in detail on the right. 
+        
+          <br>
+          <br>
+          <br>
+          <br>
+
+        <div class="image-collection">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Stills/countriesWithGreatestRisk copy.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Stills/CountriesLeastRisk copy.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Stills/CountriesWithHighestEmissions copy.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Stills/CountriesLeastEmissions copy.png">
+        </div>
+
+          <br>
+          <br>
+
+          <h3>
+            * Exhibition and Final Outputs *
+          </h3>
+
+          In addition to the interactive program, we created a program that generates a single hurricane for any given country in the dataset. This program was used to generate high resolution videos for 
+          displaying the project in exhibition settings. In 2024, the project was exhibited at Numerical Existence at the Oi Futuro Museum in Rio de Janeiro, Brazil. 
+        
+        <div class="image-collection">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Exhibits/exhibit1.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Exhibits/exhibit2.png">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Exhibits/exhibit3.png">
+        </div>
+
+          <br>
+          <br>  
+
+
+        The project was also exhibited at the University of Virginia's Data Science Institue as part of their "Data is Art" exhibition, and presented at the 2024 2CO conference hosted in Barcelona, Spain at ELISAVA University. 
+
+
+            <div class="image-collection">
+          <img src="imgs/PerfectStorm/Exhibits/DataIsARTPerfectStorm copy.jpeg" class="gallery-collection-img">
+          <img class="gallery-collection-img" src="imgs/PerfectStorm/Exhibits/2CO.png">
+            </div>
+
+
+          <br>
+          <br>
+          Ultimately, we aim to depict this metaphorical representation of climate vulnerabilities juxtaposed with global greenhouse gas emissions 
+          to shed light on the relationship between risk and emissions at the country-level granularity. Many nations with low GHG emissions have 
+          and will continue to experience destructive climate events that they did not cause. High-emitting nations should be held responsible for 
+          climate damages in low-emitting nations, and many high-emitting nations can afford to. But, for high emitters, while pollution has historically
+          been something to bury or ship away, climate risk cannot be exported. The impacts of high emissions reverberate globally, regardless of the source,
+          in increasingly unpredictable and destructive ways. 
         </p>
 
-        <br>
+        <h3>* Project Video *</h3>
 
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/901381287?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="A Perfect Storm"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        
+
+        <h3>* Project Team *</h3>
         <p>
-          Then, I created a data dashboard to further describe and summarize the dataset:
-          <img src="imgs/wornTextile/dashboard.png" class="gallery-img">
+          Chloe Prock <br> 
+          Pedro Cruz <br>
+          Gregory Gold <br> <br>
+
+          This project was developed as part of the Creative Climate Lab Team's work at
+          Northeastern University. <br> <br> 
+
+          Video Edited by Noah Berkowitz 
         </p>
 
-        <br>
-
+        <h3>* References *</h3>
         <p>
-          After creating this dashboard, it became clear that the differentiation between imports and exports was
-          arbitrary, and simply representative of which trading partner had been the reporting party. I restructured the
-          data so that instead, we had an exporter and an importer for each recorded trade instance.
-          <img src="imgs/wornTextile/data.png" class="gallery-img">
+        [1] H.A Baer, “Global Capitalism and Climate Change”, 2012. <br>
+        [2] Hannah Ritchie, Pablo Rosado and Max Roser (2023), “CO₂ and Greenhouse Gas Emissions”, Published online at OurWorldInData.org. Retrieved from: 'https://ourworldindata.org/co2-and-greenhouse-gas-emissions'. <br>
+        [3] David Eckstein, Vera Kunzel, Laura Schafer, for Germanwatch, “Global Climate Risk Index 2021”, and “Global Climate Risk Index 2020”. Retrieved from: https://www.germanwatch.org/en/19777 and https://www.germanwatch.org/en/17307 <br>
         </p>
-
-        <p>
-          I continued to explore how to visualize this information. In this version, I continued to use the the flow
-          glyphs from the dashboard, using the p5js library to generate the visualization. Initially, I had them very
-          spaced out -- but discovered that when condensed together, they began to look like threads on a textile.
-          <img class="gallery-img" src="imgs/wornTextile/threads.png">
-
-        </p>
-
-        <p>
-          In the final iteration of the project, I continued to explore the metaphor of threads, and the visualization
-          takes the form of a patchwork textile.
-          <img class="gallery-img" src="imgs/wornTextile/sketch.jpg">
-        </p>
-
-        <br>
-
-        <a href="https://chloeprock.github.io/worn-textile-trade/">View live project</a>
-
-        <img class="gallery-img" src="imgs/wornTextile/finalV2.png">
 
       </div>
 
@@ -143,3 +225,4 @@
 </body>
 
 </html>
+

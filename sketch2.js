@@ -25,9 +25,9 @@ let rippleAmp = 20, rippleFreq = 0.05, rippleDecay = 0.005;
 
 let inkDrops = []; // array for multiple ink drops
 
-let projectNames = ["A Perfect Storm", "Worn Textile Trade", "Planting Calendar", 
+let projectNames = [ "Our Energy Nexus", "A Perfect Storm", "Worn Textile Trade", "Planting Calendar", 
                     "To Capture a Feeling", "Climate Resilience Report", 
-                    "La Lettura", "Visualizing the Waste System", "Data sketches", 
+                    "La Lettura", "Visualizing the Waste System", 
                     "Unicef Guidance Note"]; 
 
 // dropdown menu
